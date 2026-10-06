@@ -27,9 +27,9 @@ dependencies. This keeps `my-usermanager` core dependencies unchanged.
 ```sh
 uv run --no-sync \
   --with "my-auth[fastapi-htmx] @ git+https://github.com/mikolaj92/my-auth.git" \
-  --with "fastapi>=0.115" \
+  --with "fastapi>=0.141.1" \
   --with "jinja2>=3.1" \
-  --with "uvicorn[standard]>=0.32" \
+  --with "uvicorn[standard]>=0.52.4" \
   uvicorn examples.fastapi_htmx.app:app --reload
 ```
 
@@ -40,9 +40,9 @@ Focused test command:
 ```sh
 uv run --no-sync \
   --with "my-auth[fastapi-htmx] @ git+https://github.com/mikolaj92/my-auth.git" \
-  --with "fastapi>=0.115" \
+  --with "fastapi>=0.141.1" \
   --with "jinja2>=3.1" \
-  --with "httpx>=0.27" \
+  --with "httpx2>=2.12.0" \
   pytest tests/test_fastapi_htmx_example.py
 ```
 
