@@ -8,7 +8,7 @@ Issue: #56 — README demo: mini-m4 sciezki i importy, ktorych pakiet nie ekspor
 ## Goal
 
 1. Replace machine-local `my-auth` checkout paths in demo commands
-   (`/Users/mini-m4-main/Developer/hermes-repos/my-auth` in root README,
+   (`/Users/mini-m4-0/Developer/hermes-repos/my-auth` in root README,
    `/Users/mini-m4-1/Developer/my-auth` in `examples/fastapi_htmx/README.md`)
    with the published `my-auth[fastapi-htmx]` extra.
 2. Stop documenting `create_usermanager_ui_router` and

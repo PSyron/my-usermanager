@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import subprocess
 import sys
-import warnings
 from pathlib import Path
 from typing import TYPE_CHECKING, Final, Protocol, cast, override
 
@@ -20,7 +19,6 @@ if TYPE_CHECKING:
         UserRow,
     )
 
-warnings.filterwarnings("ignore", message="Using `httpx` with `starlette.testclient`*")
 
 import pytest
 from app_factory.csrf import SessionCsrfProtection as FactorySessionCsrfProtection

@@ -24,7 +24,7 @@ FORBIDDEN_CORE_IMPORTS: Final = (
     "my_auth",
     "my_usermanager.adapters.fastapi_htmx",
 )
-OPTIONAL_EXAMPLE_DEPENDENCIES: Final = ("fastapi", "jinja2", "httpx", "my_auth")
+OPTIONAL_EXAMPLE_DEPENDENCIES: Final = ("fastapi", "jinja2", "httpx2", "my_auth")
 FORBIDDEN_APP_SOURCE_SNIPPETS: Final = (
     "request.session",
     "set_cookie(",
@@ -46,8 +46,8 @@ def run_fresh_python(script: str) -> subprocess.CompletedProcess[str]:
     env = dict(os.environ)
     source_paths = (
         REPO_ROOT / "src",
-        Path("/Users/mini-m4-main/Developer/my-auth/src"),
-        Path("/Users/mini-m4-main/Developer/app-factory"),
+        Path("/Users/mini-m4-0/Developer/my-auth/src"),
+        Path("/Users/mini-m4-0/Developer/app-factory"),
     )
     env["PYTHONPATH"] = (
         ":".join(str(path) for path in source_paths) + ":" + env.get("PYTHONPATH", "")
@@ -146,8 +146,8 @@ def test_readme_uses_uv_only_and_names_host_owned_security_boundaries() -> None:
         assert snippet not in readme
     forbidden_machine_paths = (
         "/Users/mini-m4-1/Developer/my-auth",
-        "/Users/mini-m4-main/Developer/hermes-repos/my-auth",
-        "/Users/mini-m4-main/Developer/my-auth",
+        "/Users/mini-m4-0/Developer/hermes-repos/my-auth",
+        "/Users/mini-m4-0/Developer/my-auth",
     )
     for snippet in forbidden_machine_paths:
         assert snippet not in readme
